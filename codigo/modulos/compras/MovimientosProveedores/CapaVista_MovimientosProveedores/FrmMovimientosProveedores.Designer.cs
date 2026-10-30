@@ -1,7 +1,9 @@
-﻿namespace CapaVista_MovimientosProveedores
+namespace CapaVista_MovimientosProveedores
 {
     partial class FrmMovimientosProveedores
     {
+        private System.Windows.Forms.TableLayoutPanel ComprasTlpFormulario;
+        private CapaVista_Componentes.Componentes.UsrEncabezadoCompras ComprasUsrEncabezadoFormulario;
         /// <summary>
         /// Variable del diseñador necesaria.
         /// </summary>
@@ -31,17 +33,10 @@
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FrmMovimientosProveedores));
-            this.ComprasColFecha = new System.Windows.Forms.DataGridViewColumn();
-            this.ComprasColTipoMovimiento = new System.Windows.Forms.DataGridViewColumn();
-            this.ComprasColDocumento = new System.Windows.Forms.DataGridViewColumn();
-            this.ComprasColDescripcion = new System.Windows.Forms.DataGridViewColumn();
-            this.ComprasColDebe = new System.Windows.Forms.DataGridViewColumn();
-            this.ComprasColHaber = new System.Windows.Forms.DataGridViewColumn();
-            this.ComprasColSaldo = new System.Windows.Forms.DataGridViewColumn();
-            this.ComprasColEstado = new System.Windows.Forms.DataGridViewColumn();
-            this.ComprasPnlDesplazamiento = new CapaVista_Componentes.Componentes.ClsPanelVerticalCompras();
+            this.ComprasTlpFormulario = new System.Windows.Forms.TableLayoutPanel();
+            this.ComprasUsrEncabezadoFormulario = new CapaVista_Componentes.Componentes.UsrEncabezadoCompras();
             this.ComprasPnlContenido = new System.Windows.Forms.Panel();
-            this.ComprasUsrMovimientos = new CapaVista_Componentes.Componentes.UsrDataGridViewCompras();
+            this.ComprasDgvMovimientos = new CapaVista_Componentes.Componentes.UsrDataGridViewCompras();
             this.ComprasPnlProveedor = new CapaVista_Componentes.Componentes.ClsPanelCompras();
             this.ComprasLblCorreo = new CapaVista_Componentes.Componentes.ClsEtiquetaCompras();
             this.ComprasLblSeparadorCorreo = new CapaVista_Componentes.Componentes.ClsEtiquetaCompras();
@@ -52,108 +47,85 @@
             this.ComprasLblTituloNit = new CapaVista_Componentes.Componentes.ClsEtiquetaCompras();
             this.ComprasLblNombreProveedor = new CapaVista_Componentes.Componentes.ClsEtiquetaCompras();
             this.ComprasPnlFiltros = new CapaVista_Componentes.Componentes.ClsPanelCompras();
+            this.ComprasCboProveedor = new CapaVista_Componentes.Componentes.UsrComboBoxCompras();
+            this.ComprasUsrFechas = new CapaVista_Componentes.Componentes.UsrRangoFechasCompras();
             this.ComprasCboEstado = new CapaVista_Componentes.Componentes.UsrComboBoxCompras();
             this.ComprasCboTipoMovimiento = new CapaVista_Componentes.Componentes.UsrComboBoxCompras();
             this.ComprasBtnConsultar = new CapaVista_Componentes.Componentes.ClsButtonCompras();
             this.ComprasLblEstado = new CapaVista_Componentes.Componentes.ClsEtiquetaCompras();
             this.ComprasLblTipoDeMovimiento = new CapaVista_Componentes.Componentes.ClsEtiquetaCompras();
             this.ComprasLblProveedor = new CapaVista_Componentes.Componentes.ClsEtiquetaCompras();
-            this.usrRangoFechasCompras1 = new CapaVista_Componentes.Componentes.UsrRangoFechasCompras();
-            this.usrComboBoxCompras1 = new CapaVista_Componentes.Componentes.UsrComboBoxCompras();
-            this.ComprasPnlDesplazamiento.SuspendLayout();
+            this.ComprasColFecha = new System.Windows.Forms.DataGridViewColumn();
+            this.ComprasColTipoMovimiento = new System.Windows.Forms.DataGridViewColumn();
+            this.ComprasColDocumento = new System.Windows.Forms.DataGridViewColumn();
+            this.ComprasColDescripcion = new System.Windows.Forms.DataGridViewColumn();
+            this.ComprasColDebe = new System.Windows.Forms.DataGridViewColumn();
+            this.ComprasColHaber = new System.Windows.Forms.DataGridViewColumn();
+            this.ComprasColSaldo = new System.Windows.Forms.DataGridViewColumn();
+            this.ComprasColEstado = new System.Windows.Forms.DataGridViewColumn();
+            this.ComprasPnlDesplazamiento = new CapaVista_Componentes.Componentes.ClsPanelVerticalCompras();
+            this.ComprasTlpFormulario.SuspendLayout();
             this.ComprasPnlContenido.SuspendLayout();
             this.ComprasPnlProveedor.SuspendLayout();
             this.ComprasPnlFiltros.SuspendLayout();
+            this.ComprasPnlDesplazamiento.SuspendLayout();
             this.SuspendLayout();
             // 
-            // ComprasColFecha
+            // ComprasTlpFormulario
             // 
-            this.ComprasColFecha.MinimumWidth = 6;
-            this.ComprasColFecha.Name = "ComprasColFecha";
-            this.ComprasColFecha.ReadOnly = true;
-            this.ComprasColFecha.Width = 125;
+            this.ComprasTlpFormulario.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(246)))), ((int)(((byte)(247)))), ((int)(((byte)(250)))));
+            this.ComprasTlpFormulario.ColumnCount = 1;
+            this.ComprasTlpFormulario.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 100F));
+            this.ComprasTlpFormulario.Controls.Add(this.ComprasUsrEncabezadoFormulario, 0, 0);
+            this.ComprasTlpFormulario.Controls.Add(this.ComprasPnlContenido, 0, 1);
+            this.ComprasTlpFormulario.Dock = System.Windows.Forms.DockStyle.Top;
+            this.ComprasTlpFormulario.Location = new System.Drawing.Point(0, 0);
+            this.ComprasTlpFormulario.Margin = new System.Windows.Forms.Padding(0);
+            this.ComprasTlpFormulario.Name = "ComprasTlpFormulario";
+            this.ComprasTlpFormulario.RowCount = 2;
+            this.ComprasTlpFormulario.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 150F));
+            this.ComprasTlpFormulario.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
+            this.ComprasTlpFormulario.Size = new System.Drawing.Size(1279, 873);
+            this.ComprasTlpFormulario.TabIndex = 0;
             // 
-            // ComprasColTipoMovimiento
+            // ComprasUsrEncabezadoFormulario
             // 
-            this.ComprasColTipoMovimiento.MinimumWidth = 6;
-            this.ComprasColTipoMovimiento.Name = "ComprasColTipoMovimiento";
-            this.ComprasColTipoMovimiento.ReadOnly = true;
-            this.ComprasColTipoMovimiento.Width = 125;
-            // 
-            // ComprasColDocumento
-            // 
-            this.ComprasColDocumento.MinimumWidth = 6;
-            this.ComprasColDocumento.Name = "ComprasColDocumento";
-            this.ComprasColDocumento.ReadOnly = true;
-            this.ComprasColDocumento.Width = 125;
-            // 
-            // ComprasColDescripcion
-            // 
-            this.ComprasColDescripcion.MinimumWidth = 6;
-            this.ComprasColDescripcion.Name = "ComprasColDescripcion";
-            this.ComprasColDescripcion.ReadOnly = true;
-            this.ComprasColDescripcion.Width = 125;
-            // 
-            // ComprasColDebe
-            // 
-            this.ComprasColDebe.MinimumWidth = 6;
-            this.ComprasColDebe.Name = "ComprasColDebe";
-            this.ComprasColDebe.ReadOnly = true;
-            this.ComprasColDebe.Width = 125;
-            // 
-            // ComprasColHaber
-            // 
-            this.ComprasColHaber.MinimumWidth = 6;
-            this.ComprasColHaber.Name = "ComprasColHaber";
-            this.ComprasColHaber.ReadOnly = true;
-            this.ComprasColHaber.Width = 125;
-            // 
-            // ComprasColSaldo
-            // 
-            this.ComprasColSaldo.MinimumWidth = 6;
-            this.ComprasColSaldo.Name = "ComprasColSaldo";
-            this.ComprasColSaldo.ReadOnly = true;
-            this.ComprasColSaldo.Width = 125;
-            // 
-            // ComprasColEstado
-            // 
-            this.ComprasColEstado.MinimumWidth = 6;
-            this.ComprasColEstado.Name = "ComprasColEstado";
-            this.ComprasColEstado.ReadOnly = true;
-            this.ComprasColEstado.Width = 125;
-            // 
-            // ComprasPnlDesplazamiento
-            // 
-            this.ComprasPnlDesplazamiento.AutoScroll = true;
-            this.ComprasPnlDesplazamiento.Controls.Add(this.ComprasPnlContenido);
-            this.ComprasPnlDesplazamiento.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.ComprasPnlDesplazamiento.Location = new System.Drawing.Point(0, 0);
-            this.ComprasPnlDesplazamiento.Margin = new System.Windows.Forms.Padding(0);
-            this.ComprasPnlDesplazamiento.Name = "ComprasPnlDesplazamiento";
-            this.ComprasPnlDesplazamiento.Size = new System.Drawing.Size(1300, 700);
-            this.ComprasPnlDesplazamiento.TabIndex = 0;
+            this.ComprasUsrEncabezadoFormulario.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(30)))), ((int)(((byte)(42)))), ((int)(((byte)(90)))));
+            this.ComprasUsrEncabezadoFormulario.Codigo = "6001";
+            this.ComprasUsrEncabezadoFormulario.Descripcion = "Consulta los movimientos de cada proveedor y filtra sus documentos por fecha y es" +
+    "tado.";
+            this.ComprasUsrEncabezadoFormulario.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.ComprasUsrEncabezadoFormulario.Location = new System.Drawing.Point(10, 10);
+            this.ComprasUsrEncabezadoFormulario.Margin = new System.Windows.Forms.Padding(10);
+            this.ComprasUsrEncabezadoFormulario.MaximumSize = new System.Drawing.Size(1500, 130);
+            this.ComprasUsrEncabezadoFormulario.MinimumSize = new System.Drawing.Size(0, 130);
+            this.ComprasUsrEncabezadoFormulario.Name = "ComprasUsrEncabezadoFormulario";
+            this.ComprasUsrEncabezadoFormulario.Size = new System.Drawing.Size(1259, 130);
+            this.ComprasUsrEncabezadoFormulario.TabIndex = 0;
+            this.ComprasUsrEncabezadoFormulario.TabStop = false;
+            this.ComprasUsrEncabezadoFormulario.Titulo = "Movimientos de proveedores";
             // 
             // ComprasPnlContenido
             // 
-            this.ComprasPnlContenido.Controls.Add(this.ComprasUsrMovimientos);
+            this.ComprasPnlContenido.Controls.Add(this.ComprasDgvMovimientos);
             this.ComprasPnlContenido.Controls.Add(this.ComprasPnlProveedor);
             this.ComprasPnlContenido.Controls.Add(this.ComprasPnlFiltros);
-            this.ComprasPnlContenido.Dock = System.Windows.Forms.DockStyle.Top;
-            this.ComprasPnlContenido.Location = new System.Drawing.Point(0, 0);
+            this.ComprasPnlContenido.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.ComprasPnlContenido.Location = new System.Drawing.Point(0, 150);
             this.ComprasPnlContenido.Margin = new System.Windows.Forms.Padding(0);
             this.ComprasPnlContenido.Name = "ComprasPnlContenido";
             this.ComprasPnlContenido.Size = new System.Drawing.Size(1279, 723);
             this.ComprasPnlContenido.TabIndex = 0;
             // 
-            // ComprasUsrMovimientos
+            // ComprasDgvMovimientos
             // 
-            this.ComprasUsrMovimientos.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(246)))), ((int)(((byte)(247)))), ((int)(((byte)(250)))));
-            this.ComprasUsrMovimientos.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(30)))), ((int)(((byte)(42)))), ((int)(((byte)(90)))));
-            this.ComprasUsrMovimientos.Location = new System.Drawing.Point(28, 400);
-            this.ComprasUsrMovimientos.Margin = new System.Windows.Forms.Padding(0);
-            this.ComprasUsrMovimientos.Name = "ComprasUsrMovimientos";
-            this.ComprasUsrMovimientos.Size = new System.Drawing.Size(1222, 275);
-            this.ComprasUsrMovimientos.TabIndex = 4;
+            this.ComprasDgvMovimientos.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(246)))), ((int)(((byte)(247)))), ((int)(((byte)(250)))));
+            this.ComprasDgvMovimientos.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(30)))), ((int)(((byte)(42)))), ((int)(((byte)(90)))));
+            this.ComprasDgvMovimientos.Location = new System.Drawing.Point(28, 400);
+            this.ComprasDgvMovimientos.Margin = new System.Windows.Forms.Padding(0);
+            this.ComprasDgvMovimientos.Name = "ComprasDgvMovimientos";
+            this.ComprasDgvMovimientos.Size = new System.Drawing.Size(1222, 275);
+            this.ComprasDgvMovimientos.TabIndex = 4;
             // 
             // ComprasPnlProveedor
             // 
@@ -247,8 +219,8 @@
             // ComprasPnlFiltros
             // 
             this.ComprasPnlFiltros.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(246)))), ((int)(((byte)(247)))), ((int)(((byte)(250)))));
-            this.ComprasPnlFiltros.Controls.Add(this.usrComboBoxCompras1);
-            this.ComprasPnlFiltros.Controls.Add(this.usrRangoFechasCompras1);
+            this.ComprasPnlFiltros.Controls.Add(this.ComprasCboProveedor);
+            this.ComprasPnlFiltros.Controls.Add(this.ComprasUsrFechas);
             this.ComprasPnlFiltros.Controls.Add(this.ComprasCboEstado);
             this.ComprasPnlFiltros.Controls.Add(this.ComprasCboTipoMovimiento);
             this.ComprasPnlFiltros.Controls.Add(this.ComprasBtnConsultar);
@@ -260,6 +232,32 @@
             this.ComprasPnlFiltros.Name = "ComprasPnlFiltros";
             this.ComprasPnlFiltros.Size = new System.Drawing.Size(1222, 191);
             this.ComprasPnlFiltros.TabIndex = 2;
+            // 
+            // ComprasCboProveedor
+            // 
+            this.ComprasCboProveedor.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(246)))), ((int)(((byte)(247)))), ((int)(((byte)(250)))));
+            this.ComprasCboProveedor.Font = new System.Drawing.Font("Segoe UI", 10F);
+            this.ComprasCboProveedor.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(30)))), ((int)(((byte)(42)))), ((int)(((byte)(90)))));
+            this.ComprasCboProveedor.Location = new System.Drawing.Point(23, 61);
+            this.ComprasCboProveedor.Margin = new System.Windows.Forms.Padding(0);
+            this.ComprasCboProveedor.MaxLength = 0;
+            this.ComprasCboProveedor.Name = "ComprasCboProveedor";
+            this.ComprasCboProveedor.Size = new System.Drawing.Size(398, 66);
+            this.ComprasCboProveedor.TabIndex = 16;
+            this.ComprasCboProveedor.TipoDatos = CapaVista_Componentes.Componentes.EnmTipoDatosCompras.Proveedores;
+            // 
+            // ComprasUsrFechas
+            // 
+            this.ComprasUsrFechas.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(246)))), ((int)(((byte)(247)))), ((int)(((byte)(250)))));
+            this.ComprasUsrFechas.FechaFin = new System.DateTime(2026, 10, 24, 0, 0, 0, 0);
+            this.ComprasUsrFechas.FechaInicio = new System.DateTime(2026, 10, 1, 0, 0, 0, 0);
+            this.ComprasUsrFechas.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(30)))), ((int)(((byte)(42)))), ((int)(((byte)(90)))));
+            this.ComprasUsrFechas.Location = new System.Drawing.Point(448, 111);
+            this.ComprasUsrFechas.Margin = new System.Windows.Forms.Padding(0);
+            this.ComprasUsrFechas.MinimumSize = new System.Drawing.Size(400, 80);
+            this.ComprasUsrFechas.Name = "ComprasUsrFechas";
+            this.ComprasUsrFechas.Size = new System.Drawing.Size(400, 80);
+            this.ComprasUsrFechas.TabIndex = 15;
             // 
             // ComprasCboEstado
             // 
@@ -301,6 +299,7 @@
             this.ComprasBtnConsultar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.ComprasBtnConsultar.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.ComprasBtnConsultar.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(30)))), ((int)(((byte)(42)))), ((int)(((byte)(90)))));
+            this.ComprasBtnConsultar.ImagenDeshabilitado = ((System.Drawing.Image)(resources.GetObject("ComprasBtnConsultar.ImagenDeshabilitado")));
             this.ComprasBtnConsultar.Location = new System.Drawing.Point(1025, 61);
             this.ComprasBtnConsultar.Margin = new System.Windows.Forms.Padding(0);
             this.ComprasBtnConsultar.MaximumSize = new System.Drawing.Size(80, 80);
@@ -337,31 +336,72 @@
             this.ComprasLblProveedor.TabIndex = 1;
             this.ComprasLblProveedor.Text = "Proveedor";
             // 
-            // usrRangoFechasCompras1
+            // ComprasColFecha
             // 
-            this.usrRangoFechasCompras1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(246)))), ((int)(((byte)(247)))), ((int)(((byte)(250)))));
-            this.usrRangoFechasCompras1.FechaFin = new System.DateTime(2026, 10, 24, 0, 0, 0, 0);
-            this.usrRangoFechasCompras1.FechaInicio = new System.DateTime(2026, 10, 1, 0, 0, 0, 0);
-            this.usrRangoFechasCompras1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(30)))), ((int)(((byte)(42)))), ((int)(((byte)(90)))));
-            this.usrRangoFechasCompras1.Location = new System.Drawing.Point(448, 111);
-            this.usrRangoFechasCompras1.Margin = new System.Windows.Forms.Padding(0);
-            this.usrRangoFechasCompras1.MinimumSize = new System.Drawing.Size(400, 80);
-            this.usrRangoFechasCompras1.Name = "usrRangoFechasCompras1";
-            this.usrRangoFechasCompras1.Size = new System.Drawing.Size(400, 80);
-            this.usrRangoFechasCompras1.TabIndex = 15;
+            this.ComprasColFecha.MinimumWidth = 6;
+            this.ComprasColFecha.Name = "ComprasColFecha";
+            this.ComprasColFecha.ReadOnly = true;
+            this.ComprasColFecha.Width = 125;
             // 
-            // usrComboBoxCompras1
+            // ComprasColTipoMovimiento
             // 
-            this.usrComboBoxCompras1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(246)))), ((int)(((byte)(247)))), ((int)(((byte)(250)))));
-            this.usrComboBoxCompras1.Font = new System.Drawing.Font("Segoe UI", 10F);
-            this.usrComboBoxCompras1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(30)))), ((int)(((byte)(42)))), ((int)(((byte)(90)))));
-            this.usrComboBoxCompras1.Location = new System.Drawing.Point(23, 61);
-            this.usrComboBoxCompras1.Margin = new System.Windows.Forms.Padding(0);
-            this.usrComboBoxCompras1.MaxLength = 0;
-            this.usrComboBoxCompras1.Name = "usrComboBoxCompras1";
-            this.usrComboBoxCompras1.Size = new System.Drawing.Size(292, 66);
-            this.usrComboBoxCompras1.TabIndex = 16;
-            this.usrComboBoxCompras1.TipoDatos = CapaVista_Componentes.Componentes.EnmTipoDatosCompras.Proveedores;
+            this.ComprasColTipoMovimiento.MinimumWidth = 6;
+            this.ComprasColTipoMovimiento.Name = "ComprasColTipoMovimiento";
+            this.ComprasColTipoMovimiento.ReadOnly = true;
+            this.ComprasColTipoMovimiento.Width = 125;
+            // 
+            // ComprasColDocumento
+            // 
+            this.ComprasColDocumento.MinimumWidth = 6;
+            this.ComprasColDocumento.Name = "ComprasColDocumento";
+            this.ComprasColDocumento.ReadOnly = true;
+            this.ComprasColDocumento.Width = 125;
+            // 
+            // ComprasColDescripcion
+            // 
+            this.ComprasColDescripcion.MinimumWidth = 6;
+            this.ComprasColDescripcion.Name = "ComprasColDescripcion";
+            this.ComprasColDescripcion.ReadOnly = true;
+            this.ComprasColDescripcion.Width = 125;
+            // 
+            // ComprasColDebe
+            // 
+            this.ComprasColDebe.MinimumWidth = 6;
+            this.ComprasColDebe.Name = "ComprasColDebe";
+            this.ComprasColDebe.ReadOnly = true;
+            this.ComprasColDebe.Width = 125;
+            // 
+            // ComprasColHaber
+            // 
+            this.ComprasColHaber.MinimumWidth = 6;
+            this.ComprasColHaber.Name = "ComprasColHaber";
+            this.ComprasColHaber.ReadOnly = true;
+            this.ComprasColHaber.Width = 125;
+            // 
+            // ComprasColSaldo
+            // 
+            this.ComprasColSaldo.MinimumWidth = 6;
+            this.ComprasColSaldo.Name = "ComprasColSaldo";
+            this.ComprasColSaldo.ReadOnly = true;
+            this.ComprasColSaldo.Width = 125;
+            // 
+            // ComprasColEstado
+            // 
+            this.ComprasColEstado.MinimumWidth = 6;
+            this.ComprasColEstado.Name = "ComprasColEstado";
+            this.ComprasColEstado.ReadOnly = true;
+            this.ComprasColEstado.Width = 125;
+            // 
+            // ComprasPnlDesplazamiento
+            // 
+            this.ComprasPnlDesplazamiento.AutoScroll = true;
+            this.ComprasPnlDesplazamiento.Controls.Add(this.ComprasTlpFormulario);
+            this.ComprasPnlDesplazamiento.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.ComprasPnlDesplazamiento.Location = new System.Drawing.Point(0, 0);
+            this.ComprasPnlDesplazamiento.Margin = new System.Windows.Forms.Padding(0);
+            this.ComprasPnlDesplazamiento.Name = "ComprasPnlDesplazamiento";
+            this.ComprasPnlDesplazamiento.Size = new System.Drawing.Size(1300, 700);
+            this.ComprasPnlDesplazamiento.TabIndex = 0;
             // 
             // FrmMovimientosProveedores
             // 
@@ -377,12 +417,13 @@
             this.MaximizeBox = false;
             this.Name = "FrmMovimientosProveedores";
             this.Text = "6001 – MovimientosProveedores";
-            this.ComprasPnlDesplazamiento.ResumeLayout(false);
+            this.ComprasTlpFormulario.ResumeLayout(false);
             this.ComprasPnlContenido.ResumeLayout(false);
             this.ComprasPnlProveedor.ResumeLayout(false);
             this.ComprasPnlProveedor.PerformLayout();
             this.ComprasPnlFiltros.ResumeLayout(false);
             this.ComprasPnlFiltros.PerformLayout();
+            this.ComprasPnlDesplazamiento.ResumeLayout(false);
             this.ResumeLayout(false);
 
         }
@@ -402,7 +443,7 @@
         private CapaVista_Componentes.Componentes.ClsEtiquetaCompras ComprasLblNit;
         private CapaVista_Componentes.Componentes.ClsEtiquetaCompras ComprasLblTituloNit;
         private CapaVista_Componentes.Componentes.ClsEtiquetaCompras ComprasLblNombreProveedor;
-        private CapaVista_Componentes.Componentes.UsrDataGridViewCompras ComprasUsrMovimientos;
+        private CapaVista_Componentes.Componentes.UsrDataGridViewCompras ComprasDgvMovimientos;
         private System.Windows.Forms.DataGridViewColumn ComprasColFecha;
         private System.Windows.Forms.DataGridViewColumn ComprasColTipoMovimiento;
         private System.Windows.Forms.DataGridViewColumn ComprasColDocumento;
@@ -413,7 +454,7 @@
         private System.Windows.Forms.DataGridViewColumn ComprasColEstado;
         private CapaVista_Componentes.Componentes.UsrComboBoxCompras ComprasCboEstado;
         private CapaVista_Componentes.Componentes.UsrComboBoxCompras ComprasCboTipoMovimiento;
-        private CapaVista_Componentes.Componentes.UsrComboBoxCompras usrComboBoxCompras1;
-        private CapaVista_Componentes.Componentes.UsrRangoFechasCompras usrRangoFechasCompras1;
+        private CapaVista_Componentes.Componentes.UsrComboBoxCompras ComprasCboProveedor;
+        private CapaVista_Componentes.Componentes.UsrRangoFechasCompras ComprasUsrFechas;
     }
 }
