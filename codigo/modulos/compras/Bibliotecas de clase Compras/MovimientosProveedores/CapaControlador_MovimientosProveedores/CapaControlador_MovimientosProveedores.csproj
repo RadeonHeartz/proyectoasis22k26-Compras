@@ -58,6 +58,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="ClsModeloNotaProveedor.cs" />
+    <Compile Include="ClsControladorCuentaPorPagar.cs" />
   </ItemGroup>
   <ItemGroup>
     <Reference Include="CapaModelo_Componentes">
