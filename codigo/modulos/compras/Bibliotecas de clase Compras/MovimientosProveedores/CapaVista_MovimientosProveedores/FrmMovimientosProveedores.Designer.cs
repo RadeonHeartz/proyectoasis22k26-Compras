@@ -66,9 +66,7 @@ namespace CapaVista_MovimientosProveedores
             this.ComprasUsrEncabezadoFormulario.Margin = new System.Windows.Forms.Padding(0);
             this.ComprasUsrEncabezadoFormulario.MaximumSize = new System.Drawing.Size(1500, 130);
             this.ComprasUsrEncabezadoFormulario.MinimumSize = new System.Drawing.Size(0, 130);
-            this.ComprasUsrEncabezadoFormulario.MostrarReportes = true;
-            this.ComprasUsrEncabezadoFormulario.RutaReporte = "RpReporteCuentaPorPagar.rdlc";
-            this.ComprasUsrEncabezadoFormulario.PrepararReporte += this.ComprasMetPrepararReporteCuentaPorPagar;
+            this.ComprasUsrEncabezadoFormulario.MostrarReportes = false;
             this.ComprasUsrEncabezadoFormulario.Name = "ComprasUsrEncabezadoFormulario";
             this.ComprasUsrEncabezadoFormulario.PaginaInicialAyuda = "MovimientosProveedores.html";
             this.ComprasUsrEncabezadoFormulario.Size = new System.Drawing.Size(1300, 130);
